@@ -1,49 +1,74 @@
+/*Variables*/
+:root {
+  --Black: #000;
+  --LighterBlack: rgba(0, 0, 0, 0.75);
+  --White: #fff;
+}
+
+/*General*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem = 10px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
+  margin: 0;
+  padding: 0;
+  color: var(--White);
 }
 
 #app {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./imgs/lvl1.png");
-    background-position: center;
-    background-size: cover;
-    background-color: black;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./imgs/lvl1.png");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--Black);
+}
 
+/*Elementos*/
+
+.game {
+    display: flex;
 }
 
 .dark {
-    filter: brightness(25%);
+  filter: brightness(25%);
 }
 
 .box {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-    /*Center the text complelety;*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  /*Center the text complelety;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .button {
-    color: black;
-    background-color: white;
-    border: none;
-    padding: 0.5em;
-    width: 40%;
-    cursor: pointer;
+  color: black;
+  background-color: var(--White);
+  border: none;
+  padding: 0.5em;
+  width: 40%;
+  cursor: pointer;
 }
 
 .lvl {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 3em;
-    ;
+  display: none;
+  background-color: var(--LighterBlack);
+  padding: 3em;
 }
 
+#options {
+  background-color: var(--LighterBlack);
+  display: flex;
+}
