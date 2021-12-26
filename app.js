@@ -12,7 +12,6 @@ const Player = (() => {
         }
     ]
 
-
     const chooseChoice = (level, choice) => {
         if (level < choices.length && choice in choices[level]) {
             choices[level][choice] = true;
@@ -41,6 +40,7 @@ const Interface = (() => {
     const reset = () => {
         appElement.classList.add("dark");
         startScreen.style.display = "flex";
+
     }
 
     const hideStartScreen = () => {
@@ -48,20 +48,43 @@ const Interface = (() => {
         startScreen.style.display = "none";
     }
 
-    const showLevel = (level) => {
+    const switchLevel = (level) => {
+        // Hide previous level
+        if (level != 0) {
+            document.querySelector(`.lvl${level - 1}`).style.display = "none";
+        }
         const lvlElement = document.querySelector(`.lvl${level}`);
-        console.log(lvlElement);
         lvlElement.style.display = "flex";
+
+        startLevel(level, lvlElement);
+
     }
 
-    const NextText = () => {
+    // MANAGE TEXT PER LEVEL
+    const startLevel = (level, lvlElement) => {
+        let count = 0;
+        let textElements = Array.from(lvlElement.querySelectorAll(".text"));
+        let nextTextButton = lvlElement.querySelector(".nextText");
+        nextTextButton.addEventListener("click", () => {
 
+            if (count < textElements.length - 1) {
+                count++;
+                textElements[count - 1].style.display = "none";
+                textElements[count].style.display = "flex";
+            } else {
+                // Display question?
+                Game.nextLevel();
+            }
+
+        });
+        textElements[count].style.display = "flex"
     }
 
 
     return {
         hideStartScreen,
-        showLevel
+        switchLevel,
+        reset
     }
 })();
 
@@ -72,18 +95,24 @@ const Game = (() => {
 
     const start = () => {
         Interface.hideStartScreen();
-        Interface.showLevel(currentLevel);
+        Interface.switchLevel(currentLevel);
     }
 
     const reset = () => {
-        Interface.init();
+        Interface.reset();
         currentLevel = 0;
+    }
+
+    const nextLevel = () => {
+        currentLevel++;
+        Interface.switchLevel(currentLevel);
     }
 
 
     return {
         start,
-        reset
+        reset,
+        nextLevel
     }
 
 })();
