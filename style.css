@@ -54,7 +54,7 @@ html {
 }
 
 .button {
-  color: black;
+  color: var(--Black);
   background-color: var(--White);
   border: none;
   padding: 0.5em;
@@ -69,6 +69,15 @@ html {
 }
 
 #options {
-  background-color: var(--LighterBlack);
-  display: flex;
+  background-color: transparent;
+}
+
+#options li {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+#options li:hover {
+  text-decoration: underline;
 }
