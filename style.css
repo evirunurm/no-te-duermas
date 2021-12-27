@@ -57,7 +57,9 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
+
 /*Bototnes*/
 .button {
   color: var(--Black);
@@ -65,7 +67,7 @@ html {
   border: none;
   font-size: 1.5rem;
   padding: 1rem;
-  width: 40%;
+  width: auto; /*Original 40%*/
   cursor: pointer;
 }
 
@@ -75,7 +77,6 @@ html {
   background-color: var(--LigtherHover);
   transition: background-color .2s;
 }
-
 
 .lvl {
   display: none;
@@ -95,4 +96,28 @@ html {
 
 #options li:hover {
   text-decoration: underline;
+}
+
+.startscreen.box {
+  /*Animación*/
+  animation: startAnimation 3s;
+}
+
+.visible {
+  animation: startAnimation 1.5s;
+}
+
+@keyframes startAnimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*Clase para ajustar boton de Reset provisional*/
+.btn-again {
+  width: auto;
+}
+
+/*Clase para ajustar el boton de play a su original provisional*/
+.btn-play {
+  width: 40%;
 }

@@ -1,3 +1,6 @@
+// Ajuste de volumen de la música
+document.querySelector('#music').volume = 0.2;
+    
     const Player = (() => {
 
     let choices = [
@@ -21,7 +24,6 @@
             b: false,
         },
     ];
-
 
     const chooseChoice = (level, choice) => {
         if (level < choices.length && choice in choices[level]) {
@@ -202,8 +204,15 @@
             },
         ];
 
+        // Listener del botón de PLAY para transición de primer lvl 
+        // se puede optimizar
+        document.querySelector("#startgame").addEventListener("click", () => {
+            transitionAnimation('.lvl');
+        });
+
         document.querySelector(".nextText").addEventListener("click", () => {
             showText();
+            transitionAnimation('.lvl'); // Animación de transición
         });
         const appElement = document.querySelector("#app");
         const startScreen = document.querySelector(".startscreen");
@@ -420,6 +429,7 @@
                             optionElement.addEventListener('click', () => {
                                 Game.makeDecision(option);
                                 showText(); // Mostrar siguiente
+                                transitionAnimation('.lvl'); // Animación de transición
                             });
                         });
                         // Ocultar botón "siguiente"
@@ -431,7 +441,7 @@
                         // Mostrar botón "finalzar"
                         const endButton = document.createElement("button");
                         endButton.classList.add("button");
-                        endButton.textContent = "PLAY AGAIN";
+                        endButton.textContent = "Dormir...";
                         optionsElement.append(endButton);
                         endButton.addEventListener('click', () => {
                             Game.reset();
@@ -441,6 +451,14 @@
             };
             textLevel++;
         };
+
+        const transitionAnimation = (elementClass) => {
+            const element = document.querySelector(elementClass);
+            element.classList.add('visible');    
+            setTimeout(() => {
+                element.classList.remove('visible');
+            }, 1200);
+        }
 
         return {
             hideStartScreen,
