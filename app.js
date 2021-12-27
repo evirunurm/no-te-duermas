@@ -395,11 +395,12 @@
         const showText = () => {
 
             texts.forEach((text) => {
+                console.log(textLevel)
                 if (text.id == textLevel && !text.mostrar) {
                     textLevel++;
                     showText();
+                    // return;
                 }
-
                 if (text.id == textLevel && text.mostrar) {
                     const optionsElement = document.querySelector("#options");
 
