@@ -11,10 +11,14 @@
     <title>No te duermas</title>
   </head>
   <body>
+    <!--El autoplay hay ocasiones que no funciona puede que sea por el navegador-->
+    <audio id="music" autoplay loop>
+      <source src="music/background_piano.mp3"/>
+    </audio>
     <main id="app" class="dark"></main>
     <div class="startscreen box">
       <h1>No te duermas</h1>
-      <button id="startgame" class="button" type="button">Play</button>
+      <button id="startgame" class="button btn-play" type="button">Play</button>
     </div>
 
     <div class="box lvl lvl0">
