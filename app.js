@@ -4,8 +4,19 @@
         {
             a: false,
             b: false,
-        },
-        {
+        }, {
+            a: false,
+            b: false,
+        }, {
+            a: false,
+            b: false,
+        }, {
+            a: false,
+            b: false,
+        }, {
+            a: false,
+            b: false,
+        }, {
             a: false,
             b: false,
         },
@@ -40,12 +51,12 @@
         let texts = [
             {
                 id: 0,
-                text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferente : Tienes una cita hoy.",
+                text: "Te despiertas.<br/> Parece una mañana como cualquier otra.<br/> Pero hay algo diferente : Tienes una cita hoy.",
                 mostrar: true,
             },
             {
                 id: 1,
-                text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.\n Qué desayunas?",
+                text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.<br/> Qué desayunas?",
                 mostrar: true,
                 opciones: {
                     a: "Tostadas",
@@ -54,17 +65,17 @@
             },
             {
                 id: '2a',
-                text: "Metes el pan en la tostadora y te vas a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
+                text: "Metes el pan en la tostadora y te vas a dar de comer a Cherry, tu gato.<br/> Casi te olvidas de él.",
                 mostrar: false,
             },
             {
                 id: '2b',
-                text: "Echas algo de leche en un vaso y te la bebes. Ahora al menos no te rugirá la tripa en medio de la cita. Ahora toca ir a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
+                text: "Echas algo de leche en un vaso y te la bebes. Ahora al menos no te rugirá la tripa en medio de la cita.<br/> Ahora toca ir a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
                 mostrar: false,
             },
             {
                 id: '3',
-                text: "Has tardado en prepararte más de lo que crías que te iba a costar. Sales a la calle. ",
+                text: "Has tardado en prepararte más de lo que crías que te iba a costar.<br/> Sales a la calle. ",
                 mostrar: true,
             },
             {
@@ -75,12 +86,12 @@
             },
             {
                 id: '5',
-                text: "Miras la hora, son las 10:54. Habéis quedado a las 11 en un café a media hora de tu apartamento. Parece que estás llegando tarde. Otra vez.",
+                text: "Miras la hora, son las 10:54. Habéis quedado a las 11 en un café a media hora de tu apartamento.<br/> Parece que estás llegando tarde. Otra vez.",
                 mostrar: true,
             },
             {
                 id: '6',
-                text: "Quizá podrías coger el metro. Aunque no te queda mucho dinero. ¿Qué haces?",
+                text: "Quizá podrías coger el metro. Aunque no te queda mucho dinero.<br/> ¿Qué haces?",
                 mostrar: true,
                 opciones: {
                     a: "Metro",
@@ -89,7 +100,7 @@
             },
             {
                 id: '7a',
-                text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén. El próximo tren viene en 11 minutos. Decides esperar.",
+                text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén.<br/> El próximo tren viene en 11 minutos. Decides esperar.",
                 mostrar: false,
             },
             {
@@ -100,7 +111,7 @@
             {
                 id: '8',
                 affected: "7a",
-                text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño. Tus párpados pesan cada vez más y más. Los cierras.",
+                text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño.<br/> Tus párpados pesan cada vez más y más.<br/> Los cierras.",
                 mostrar: false,
             },
             {
@@ -112,13 +123,87 @@
             },
             {
                 id: '10',
-                text: "Llegas al café.",
+                text: "Estás en frente del local en el que habéis quedado. Miras tu móvil : Son las 11:20, y no tienes ninguna notificación. <br/>Qué raro. Supongo que también estará llegando tarde.",
+                mostrar: true,
+            },
+            {
+                id: '11',
+                text: "Entras al café.",
+                mostrar: true,
+            },
+            {
+                id: '12',
+                text: "Está vacío. Completamente vacío. Tan vacío que se te hace incómodo estar dentro. Te empiezas a preguntar qué está pasando:<br/> “¿Debería estar aquí?”, “¿Seguro que era este sitio?”...",
+                mostrar: true,
+            },
+            {
+                id: '13',
+                text: "Decides sentarte en una de las mesas.",
+                mostrar: true,
+            },
+            {
+                id: '14',
+                text: "Decides sentarte en una de las mesas. La oscuridad del local, junto con el tinte rojo que le dan al ambiente las luces fluorescentes pegan en tus ojos. <br/>Qué vas a hacer ahora?",
+                mostrar: true,
+                opciones: {
+                    a: "Esperar",
+                    b: "Buscar personal del café"
+                }
+            },
+            {
+                id: '15a',
+                text: "Decides ser paciente y esperar.",
+                mostrar: false,
+            },
+            {
+                id: '15b',
+                text: "Te levantas y te diriges hacia la barra. La puerta que lleva a la cocina está abierta.<br/> “Perdon, ¿Hay alguien?”. ",
+                mostrar: false,
+            },
+            {
+                id: '16',
+                affected: "15b",
+                text: "Silencio. <br/>¿Qué haces?",
+                mostrar: false,
+                opciones: {
+                    a: "Entrar en la cocina",
+                    b: "Volver a tu mesa"
+                }
+            },
+            {
+                id: '17a',
+                affected: "15b",
+                text: "Te acercas a la puerta de la cocina. Notas algo raro.",
+                mostrar: false,
+            },
+            {
+                id: '17b',
+                affected: "15b",
+                text: "Decides no entrar en la cocina. Ellos sabrán qué hacen. Vuelves a tu mesa y te sientas.",
+                mostrar: false,
+            },
+            {
+                id: '18',
+                affected: "17a",
+                text: "Hay una persona tirada en el suelo. Tratas de acercarte para comprobar si está viva, pero al dar el primer paso te resbalas en el charo de aceite que hay en el suelo, justo a un lado de la persona.",
+                mostrar: false,
+            },
+            {
+                id: '19',
+                affected: "17a",
+                final: true,
+                text: "Golpeas el suelo con la cabeza en seco. Te has dormido.",
+                mostrar: false,
+            },
+            {
+                id: '20',
+                text: "Quizá sea buena idea llamarle. Le llamas... No contesta. Le llamas otra vez, tampoco contesta. Decides mandarle un mensaje : “Dónde estás? Vas a venir?”.",
                 mostrar: true,
             },
         ];
 
         document.querySelector(".nextText").addEventListener("click", () => {
-            showText(textLevel);
+            showText();
         });
         const appElement = document.querySelector("#app");
         const startScreen = document.querySelector(".startscreen");
@@ -146,12 +231,12 @@
             texts = [
                 {
                     id: 0,
-                    text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferente : Tienes una cita hoy.",
+                    text: "Te despiertas.<br/> Parece una mañana como cualquier otra.<br/> Pero hay algo diferente : Tienes una cita hoy.",
                     mostrar: true,
                 },
                 {
                     id: 1,
-                    text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.\n Qué desayunas?",
+                    text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.<br/> Qué desayunas?",
                     mostrar: true,
                     opciones: {
                         a: "Tostadas",
@@ -160,17 +245,17 @@
                 },
                 {
                     id: '2a',
-                    text: "Metes el pan en la tostadora y te vas a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
+                    text: "Metes el pan en la tostadora y te vas a dar de comer a Cherry, tu gato.<br/> Casi te olvidas de él.",
                     mostrar: false,
                 },
                 {
                     id: '2b',
-                    text: "Echas algo de leche en un vaso y te la bebes. Ahora al menos no te rugirá la tripa en medio de la cita. Ahora toca ir a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
+                    text: "Echas algo de leche en un vaso y te la bebes. Ahora al menos no te rugirá la tripa en medio de la cita.<br/> Ahora toca ir a dar de comer a Cherry, tu gato. Casi te olvidas de él.",
                     mostrar: false,
                 },
                 {
                     id: '3',
-                    text: "Has tardado en prepararte más de lo que crías que te iba a costar. Sales a la calle. ",
+                    text: "Has tardado en prepararte más de lo que crías que te iba a costar.<br/> Sales a la calle. ",
                     mostrar: true,
                 },
                 {
@@ -181,12 +266,12 @@
                 },
                 {
                     id: '5',
-                    text: "Miras la hora, son las 10:54. Habéis quedado a las 11 en un café a media hora de tu apartamento. Parece que estás llegando tarde. Otra vez.",
+                    text: "Miras la hora, son las 10:54. Habéis quedado a las 11 en un café a media hora de tu apartamento.<br/> Parece que estás llegando tarde. Otra vez.",
                     mostrar: true,
                 },
                 {
                     id: '6',
-                    text: "Quizá podrías coger el metro. Aunque no te queda mucho dinero. ¿Qué haces?",
+                    text: "Quizá podrías coger el metro. Aunque no te queda mucho dinero.<br/> ¿Qué haces?",
                     mostrar: true,
                     opciones: {
                         a: "Metro",
@@ -195,7 +280,7 @@
                 },
                 {
                     id: '7a',
-                    text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén. El próximo tren viene en 11 minutos. Decides esperar.",
+                    text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén.<br/> El próximo tren viene en 11 minutos. Decides esperar.",
                     mostrar: false,
                 },
                 {
@@ -206,7 +291,7 @@
                 {
                     id: '8',
                     affected: "7a",
-                    text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño. Tus párpados pesan cada vez más y más. Los cierras.",
+                    text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño.<br/> Tus párpados pesan cada vez más y más.<br/> Los cierras.",
                     mostrar: false,
                 },
                 {
@@ -218,7 +303,82 @@
                 },
                 {
                     id: '10',
-                    text: "Llegas al café.",
+                    text: "Estás en frente del local en el que habéis quedado. Miras tu móvil : Son las 11:20, y no tienes ninguna notificación. <br/>Qué raro. Supongo que también estará llegando tarde.",
+                    mostrar: true,
+                },
+                {
+                    id: '11',
+                    text: "Entras al café.",
+                    mostrar: true,
+                },
+                {
+                    id: '12',
+                    text: "Está vacío. Completamente vacío. Tan vacío que se te hace incómodo estar dentro. Te empiezas a preguntar qué está pasando:<br/> “¿Debería estar aquí?”, “¿Seguro que era este sitio?”...",
+                    mostrar: true,
+                },
+                {
+                    id: '13',
+                    text: "Decides sentarte en una de las mesas.",
+                    mostrar: true,
+                },
+                {
+                    id: '14',
+                    text: "Decides sentarte en una de las mesas. La oscuridad del local, junto con el tinte rojo que le dan al ambiente las luces fluorescentes pegan en tus ojos. <br/>Qué vas a hacer ahora?",
+                    mostrar: true,
+                    opciones: {
+                        a: "Esperar",
+                        b: "Buscar personal del café"
+                    }
+                },
+                {
+                    id: '15a',
+                    text: "Decides ser paciente y esperar.",
+                    mostrar: false,
+                },
+                {
+                    id: '15b',
+                    text: "Te levantas y te diriges hacia la barra. La puerta que lleva a la cocina está abierta.<br/> “Perdon, ¿Hay alguien?”. ",
+                    mostrar: false,
+                },
+                {
+                    id: '16',
+                    affected: "15b",
+                    text: "Silencio. <br/>¿Qué haces?",
+                    mostrar: false,
+                    opciones: {
+                        a: "Entrar en la cocina",
+                        b: "Volver a tu mesa"
+                    }
+                },
+                {
+                    id: '17a',
+                    affected: "15b",
+                    text: "Te acercas a la puerta de la cocina. Notas algo raro.",
+                    mostrar: false,
+                },
+                {
+                    id: '17b',
+                    affected: "15b",
+                    text: "Decides no entrar en la cocina. Ellos sabrán qué hacen. Vuelves a tu mesa y te sientas.",
+                    mostrar: false,
+                },
+                {
+                    id: '18',
+                    affected: "17a",
+                    text: "Hay una persona tirada en el suelo. Tratas de acercarte para comprobar si está viva, pero al dar el primer paso te resbalas en el charo de aceite que hay en el suelo, justo a un lado de la persona.",
+                    mostrar: false,
+                },
+                {
+                    id: '19',
+                    affected: "17a",
+                    text: "El suelo te golpea la cabeza en seco. Te has dormido.",
+                    mostrar: false,
+                },
+                {
+                    id: '20',
+                    affected: "15a",
+                    affected: "17b",
+                    text: "Quizá sea buena idea llamarle. Le llamas... No contesta. Le llamas otra vez, tampoco contesta. Decides mandarle un mensaje : “Dónde estás? Vas a venir?”.",
                     mostrar: true,
                 },
             ];
@@ -230,20 +390,23 @@
             document.querySelector('.lvl').style.display = "flex";
         };
 
-        const showText = (level) => {
+        // Quitado el parametro "level" que ensuciaba la función.
+        //  Ahora depende del atributo "textLevel" directamente.
+        const showText = () => {
 
             texts.forEach((text) => {
-                console.log(textLevel)
-                if (text.id == level && !text.mostrar) {
-                    showText(textLevel++);
+                if (text.id == textLevel && !text.mostrar) {
+                    textLevel++;
+                    showText();
                 }
-                if (text.id == level && text.mostrar) {
+
+                if (text.id == textLevel && text.mostrar) {
                     const optionsElement = document.querySelector("#options");
 
                     // Vaciar el elemento del texto
                     optionsElement.innerHTML = "";
                     // Insertar texto
-                    document.querySelector(".text").textContent = text.text;
+                    document.querySelector(".text").innerHTML = text.text;
                     // Mostrar botón "siguiente"
                     document.querySelector(".nextText").style.display = "block";
 
@@ -255,7 +418,7 @@
                             optionsElement.append(optionElement);
                             optionElement.addEventListener('click', () => {
                                 Game.makeDecision(option);
-                                showText(textLevel); // Mostrar soguiente
+                                showText(); // Mostrar siguiente
                             });
                         });
                         // Ocultar botón "siguiente"
@@ -298,9 +461,7 @@
     };
 
     const makeDecision = (decision) => {
-        console.log(currentDecision, decision)
         Player.chooseChoice(currentDecision, decision);
-        console.log(Player.choices)
         currentDecision++;
         takeRoute(Interface.getTextLevel(), decision);
         // Comporbar posible final
@@ -311,7 +472,6 @@
         currentDecision = 0;
         Interface.setTextLevel(0);
         Interface.reset();
-        console.log(Interface.getTexts())
         Game.start();
     }
 
@@ -331,7 +491,6 @@
         affectedTexts.forEach((text) => {
             Interface.getTexts()[Interface.getTexts().indexOf(text)].mostrar = true;
         });
-        console.log(Interface.getTexts());
 
     };
 
