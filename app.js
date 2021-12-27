@@ -53,6 +53,7 @@
                 id: 0,
                 text: "Te despiertas.<br/> Parece una mañana como cualquier otra.<br/> Pero hay algo diferente : Tienes una cita hoy.",
                 mostrar: true,
+                imgsrc: "./imgs/sleeping.png"
             },
             {
                 id: 1,
@@ -102,11 +103,13 @@
                 id: '7a',
                 text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén.<br/> El próximo tren viene en 11 minutos. Decides esperar.",
                 mostrar: false,
+                imgsrc: "./imgs/metro.png"
             },
             {
                 id: '7b',
                 text: "Vas caminando hacia el café. Tienes bastante sueño, pero el ligero paso con el que vas hace que eso no importe tanto.",
                 mostrar: false,
+                imgsrc: "./imgs/walking.png"
             },
             {
                 id: '8',
@@ -130,6 +133,7 @@
                 id: '11',
                 text: "Entras al café.",
                 mostrar: true,
+                imgsrc: "./imgs/bar.png"
             },
             {
                 id: '12',
@@ -394,12 +398,12 @@
         //  Ahora depende del atributo "textLevel" directamente.
         const showText = () => {
 
-            texts.forEach((text) => {
+            for(const text of texts) {
                 console.log(textLevel)
                 if (text.id == textLevel && !text.mostrar) {
                     textLevel++;
                     showText();
-                    // return;
+                    return;
                 }
                 if (text.id == textLevel && text.mostrar) {
                     const optionsElement = document.querySelector("#options");
@@ -425,20 +429,25 @@
                         // Ocultar botón "siguiente"
                         document.querySelector(".nextText").style.display = "none";
                     }
+                    // Si es el final
                     if ("final" in text) {
                         // Ocultar botón "siguiente"
                         document.querySelector(".nextText").style.display = "none";
                         // Mostrar botón "finalzar"
                         const endButton = document.createElement("button");
                         endButton.classList.add("button");
-                        endButton.textContent = "PLAY AGAIN";
+                        endButton.textContent = "Siguiente";
                         optionsElement.append(endButton);
                         endButton.addEventListener('click', () => {
                             Game.reset();
                         });
                     }
+                    // Si tiene una imagen asociada
+                    if ("imgsrc" in text) {
+                        appElement.style.backgroundImage = `url(${text.imgsrc})`;
+                    }
                 }
-            });
+            };
             textLevel++;
         };
 

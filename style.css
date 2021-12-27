@@ -30,7 +30,7 @@ html {
 #app {
   width: 100vw;
   height: 100vh;
-  background-image: url("./imgs/lvl1.png");
+  background-image: url("imgs/sleeping.png");
   background-position: center;
   background-size: cover;
   background-color: var(--Black);
