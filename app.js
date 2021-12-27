@@ -44,7 +44,7 @@
             },
             {
                 id: 1,
-                text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar. Qué desayunas?",
+                text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.\n Qué desayunas?",
                 mostrar: true,
                 opciones: {
                     a: "Tostadas",
@@ -74,15 +74,47 @@
             },
             {
                 id: '5',
-                text: "Vas corriendo ahaha",
+                text: "Miras la hora, son las 10:54. Habéis quedado a las 11 en un café a media hora de tu apartamento. Parece que estás llegando tarde. Otra vez.",
                 mostrar: true,
             },
             {
                 id: '6',
-                "final" : true,
-                text: "Metes el pan en la tostadora y te vas a dar de comer a Cherry, tu gato. Casi te olvidas de él. Estás tardando en encontrar a Cherry",
+                text: "Quizá podrías coger el metro. Aunque no te queda mucho dinero. ¿Qué haces?",
+                mostrar: true,
+                opciones: {
+                    a: "Metro",
+                    b: "Ir andando"
+                }
+            },
+            {
+                id: '7a',
+                text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén. El próximo tren viene en 11 minutos. Decides esperar.",
+                mostrar: false,
+            },
+            {
+                id: '7b',
+                text: "Vas caminando hacia el café. Tienes bastante sueño, pero el ligero paso con el que vas hace que eso no importe tanto.",
+                mostrar: false,
+            },
+            {
+                id: '8',
+                affected: "7a",
+                text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño. Tus párpados pesan cada vez más y más. Los cierras.",
+                mostrar: false,
+            },
+            {
+                id: '9',
+                affected: "7a",
+                final: true,
+                text: "Te estás durmiendo...",
+                mostrar: false,
+            },
+            {
+                id: '10',
+                text: "Llegas al café.",
                 mostrar: true,
             },
+
         ];
         const nextTextButton = document.querySelector(".nextText");
         nextTextButton.addEventListener("click", () => {
@@ -131,16 +163,25 @@
                     // SI TIENE OPCIONES :
                     if ("opciones" in text) {
                         Object.keys(text.opciones).forEach((option) => {
-                            let optionElement = document.createElement("LI");
+                            const optionElement = document.createElement("LI");
                             optionElement.textContent = text.opciones[option];
                             optionsElement.append(optionElement);
                             optionElement.addEventListener('click', () => {
                                 Game.makeDecision(option);
-                                showText(textLevel); // Mostrar
+                                showText(textLevel); // Mostrar soguiente
                             });
                         });
                         // Ocultar botón "siguiente"
                         document.querySelector(".nextText").style.display = "none";
+                    }
+                    if ("final" in text) {
+                        // Ocultar botón "siguiente"
+                        document.querySelector(".nextText").style.display = "none";
+                        // Mostrar botón "finalzar"
+                        const endButton = document.createElement("button");
+                        endButton.classList.add("button");
+                        endButton.textContent = "PLAY AGAIN";
+                        optionsElement.append(endButton);
                     }
                 }
             });
@@ -149,7 +190,6 @@
 
         return {
             hideStartScreen,
-            textLevel,
             showText,
             texts,
             reset,
@@ -174,12 +214,17 @@
         // Comporbar posible final
     };
 
+    const lost = () => {
+
+    }
+
     const takeRoute = (nextLevel, choice) => {
         let text = Interface.texts.find(text => {
             return text.id === `${nextLevel}${choice}`;
         });
-        Interface.texts[Interface.texts.indexOf(text)].id = 2;
+        Interface.texts[Interface.texts.indexOf(text)].id = nextLevel;
         Interface.texts[Interface.texts.indexOf(text)].mostrar = true;
+
 
         let affectedTexts = Interface.texts.filter(text => {
             return text.affected === `${nextLevel}${choice}`;
@@ -188,6 +233,7 @@
         affectedTexts.forEach((text) => {
             Interface.texts[Interface.texts.indexOf(text)].mostrar = true;
         });
+        console.log(Interface.texts);
 
     };
 
