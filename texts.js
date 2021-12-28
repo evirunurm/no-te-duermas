@@ -1,4 +1,4 @@
-let texts = [
+let OriginalTexts = [
     {
         id: 0,
         text: "Te despiertas.<br/> Parece una mañana como cualquier otra.<br/> Pero hay algo diferente : Tienes una cita hoy.",
@@ -180,18 +180,20 @@ let texts = [
         mostrar: true,
         opciones: {
             a: "Ir en coche",
-            b: "IR en metro"
+            b: "Ir en metro"
         }
     },
     {
         id: '26a',
         text: "Aceptas su propuesta de ir en coche. Os metéis en su coche. <br/> Pones la radio. ",
         mostrar: false,
+        imgsrc: "./imgs/car.png"
     },
     {
         id: '26b',
         text: "Bajáis a la estación. Os sientáis en uno de los bancos que hay a lo largo del andén. <br/> El próximo tren viene en 3 minutos, habéis tenido suerte.",
         mostrar: false,
+        imgsrc: "./imgs/metro.png"
     },
     {
         id: '27',
@@ -231,6 +233,7 @@ let texts = [
         id: '33',
         text: "Llegais a la bolera. <br/> Está llena de gente.",
         mostrar: true,
+        imgsrc: "./imgs/bowling.png"
     },
     {
         id: '34',
@@ -321,6 +324,7 @@ let texts = [
         affected: "43a",
         text: "Está empezando a hacer frío. El ambiente se ha llenando se una niebla densa. Se le nota más triste que antes. ",
         mostrar: false,
+        imgsrc: "./imgs/fog.png"
     },
     {
         id: '47',
@@ -399,7 +403,7 @@ let texts = [
     {
         id: '58',
         affected: "54a",
-        text: "Giras la cabeza y ves que la sigue arragando de la bufanda. Ya no sabes ni si está consciente o no.<br/>Gritas su nombre.</br>No contesta.",
+        text: "Giras la cabeza y ves que la sigue agarrando de la bufanda. Ya no sabes ni si está consciente o no.<br/>Gritas su nombre.</br>No contesta.",
         mostrar: false,
     },
     {
@@ -460,6 +464,7 @@ let texts = [
         id: '68',
         text: "Decides esperar con ella.<br/>Estáis sentados en un banco en las afueras de la bolera. La temperatura ha bajado bastante desde que entrasteis. Los dedos de tus pies se están empezando a dormir.",
         mostrar: true,
+        imgsrc: "./imgs/bench.png"
     },
     {
         id: '69',
@@ -520,6 +525,7 @@ let texts = [
         id: '78',
         text: "Llegas a tu casa después de 40 minutos de caminar. No sientes ni tu pies, ni tus manos.<br/>Le pones comida en el plato a tu gato. Suficiente para los días que te cueste acordarte de él de nuevo.",
         mostrar: true,
+        imgsrc: "./imgs/cat.png"
     },
     {
         id: '79',
@@ -528,7 +534,8 @@ let texts = [
         opciones: {
             a: "Enviarle un mensaje",
             b: "Dormir"
-        }
+        },
+        imgsrc: "./imgs/bed.png"
     },
     {
         id: '80a',
@@ -611,5 +618,7 @@ let texts = [
         final: true,
         text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferenete : Te falta ella.",
         mostrar: true,
+        imgsrc: "./imgs/sleeping.png"
     },
 ];
+export default OriginalTexts;
