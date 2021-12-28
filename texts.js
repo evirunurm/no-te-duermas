@@ -92,12 +92,12 @@ let OriginalTexts = [
     },
     {
         id: '13',
-        text: "Decides sentarte en una de las mesas.",
+        text: "Te sientas en una de las mesas.",
         mostrar: true,
     },
     {
         id: '14',
-        text: "Decides sentarte en una de las mesas. La oscuridad del local, junto con el tinte rojo que le dan al ambiente las luces fluorescentes pegan en tus ojos. <br/>Qué vas a hacer ahora?",
+        text: "La oscuridad del local junto con el tinte rojo que le dan al ambiente las luces fluorescentes, pegan en tus ojos.<br/>¿Qué vas a hacer ahora?",
         mostrar: true,
         opciones: {
             a: "Esperar",
@@ -111,7 +111,7 @@ let OriginalTexts = [
     },
     {
         id: '15b',
-        text: "Te levantas y te diriges hacia la barra. La puerta que lleva a la cocina está abierta.<br/> “Perdón, ¿Hay alguien?”. ",
+        text: "Te levantas y te diriges hacia la barra. La puerta que lleva a la cocina está abierta.<br/> “Perdón, ¿Hay alguien?”.",
         mostrar: false,
     },
     {
@@ -322,7 +322,7 @@ let OriginalTexts = [
     {
         id: '46',
         affected: "43a",
-        text: "Está empezando a hacer frío. El ambiente se ha llenando se una niebla densa. Se le nota más triste que antes. ",
+        text: "Está empezando a hacer frío. El ambiente se ha llenando se una niebla densa. Se le nota más triste que antes.",
         mostrar: false,
         imgsrc: "./imgs/fog.png"
     },
@@ -335,7 +335,7 @@ let OriginalTexts = [
     {
         id: '48',
         affected: "43a",
-        text: "Pero justo antes de que sueltes la primera palabra ella te interrumpe. <br/> “No digas nada.” <br/> No entiendes nada. Le miras y ves que está haciendo gestos con los ojos para que mires hacia atrás.",
+        text: "Pero justo antes de que sueltes la primera palabra ella te interrumpe. <br/> “No digas nada.” <br/> No entiendes qué está pasando. Le miras y ves que está haciendo gestos con los ojos para que mires hacia atrás.",
         mostrar: false,
     },
     {
@@ -347,7 +347,7 @@ let OriginalTexts = [
     {
         id: '50',
         affected: "43a",
-        text: "Ella insiste en ir más rápido. Le haces caso. <br/> Aumentaís el ritmo.<br/> Te giras y te das cuenta de que están corriendo hacia vosotros.",
+        text: "Ella insiste en ir más rápido. Le haces caso. <br/> Aumentáis el ritmo.<br/> Te giras y te das cuenta de que están corriendo hacia vosotros.",
         mostrar: false,
     },
     {
@@ -397,7 +397,7 @@ let OriginalTexts = [
     {
         id: '57',
         affected: "54a",
-        text: "El hombre que te pegó te empuja de encima del otro con otra patada, esta vez en el costado. Te pone con el tripa hacia el suelo y se sienta encima. <br/> Se empiezan a reír.",
+        text: "El hombre que te pegó te empuja de encima del otro con otra patada, esta vez en el costado. Te pone con la tripa hacia el suelo y se sienta encima. <br/> Se empiezan a reír.",
         mostrar: false,
     },
     {
@@ -440,7 +440,7 @@ let OriginalTexts = [
     {
         id: '64',
         affected: "54b",
-        text: "Y aquí estás, corriendo como un cobarde. Prácticamente sin sentir los pies.<br/>Te giras una última vez, y ves a los dos hombres encima de ella. <br/> Antes de poder darte cuenta de nada, te tropiezas y caes.",
+        text: "Y aquí estás, corriendo como un cobarde. Prácticamente sin sentir los pies.<br/>Te giras una última vez, y ves a los dos hombres encima de ella.<br/>Antes de poder darte cuenta de nada, te tropiezas y caes.",
         mostrar: false,
     },
     {
@@ -483,7 +483,7 @@ let OriginalTexts = [
     },
     {
         id: '72',
-        text: "“Te mira. No puedes mirarle a los ojos. Miras hacia delante",
+        text: "Te mira. No puedes mirarle a los ojos. Miras hacia delante",
         mostrar: true,
     },
     {
@@ -518,7 +518,7 @@ let OriginalTexts = [
     },
     {
         id: '77',
-        text: "Patear piedras mientras caminas calienta un poco tus pies. Tenías que haberte puesto más ropa.<br/>Has pasado un buen día al menos. Ahora toca bajar del cielo a tu vida real.<br/>Cherry. Tendrá hambre...",
+        text: "Patear piedras mientras caminas calienta un poco tus pies. Tenías que haberte puesto más ropa.<br/>Has pasado un buen día, al menos. Ahora toca bajar del cielo a tu vida real.<br/>Cherry. Tendrá hambre...",
         mostrar: true,
     },
     {
@@ -570,7 +570,7 @@ let OriginalTexts = [
     },
     {
         id: '83',
-        text: "“Buenos días, ¿es usted familiar de Mia?”",
+        text: "“Buenos días, ¿es familiar de Mia?”",
         mostrar: true,
     },
     {
@@ -580,7 +580,7 @@ let OriginalTexts = [
     },
     {
         id: '85',
-        text: "“Lamentamos comunicarle que Mia ha fallecido en un accidente de tráfico. No hemos podido hacer más...”",
+        text: "“Siento comunicarte que Mia ha fallecido en un accidente de tráfico.”",
         mostrar: true,
     },
     {
@@ -600,7 +600,7 @@ let OriginalTexts = [
     },
     {
         id: '89',
-        text: "No puedes evitar pensar en cómo va a ser tu vida ahora.<br/>Va a seguir igual.<br/>El tiempo completo que habéis pasado juntos no llega ni a una semana. No puedes parar de llorar, de imáginarte tu vida con ella.",
+        text: "No puedes evitar pensar en cómo va a ser tu vida ahora.<br/>Va a seguir igual.<br/>El tiempo completo que habéis pasado juntos no llega ni a una semana. No puedes parar de llorar, de imaginarte tu vida con ella.",
         mostrar: true,
     },
     {
@@ -616,6 +616,7 @@ let OriginalTexts = [
     {
         id: '92',
         final: true,
+        end: true,
         text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferenete : Te falta ella.",
         mostrar: true,
         imgsrc: "./imgs/sleeping.png"

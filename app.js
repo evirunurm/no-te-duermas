@@ -15,10 +15,10 @@ btnMusic.addEventListener('click', () => {
     } else {
         audio.play();
         audio.volume = 0.2;
+        audio.loop = true;
         sound.style.display = "block";
         mute.style.display = "none";
     }
-
 });
 
 const Player = (() => {
@@ -171,6 +171,20 @@ const Interface = (() => {
                 // Si tiene una imagen asociada
                 if ("imgsrc" in text) {
                     appElement.style.backgroundImage = `url(${text.imgsrc})`;
+                }
+                if ("end" in text) {
+                    // Ocultar botón "siguiente"
+                    document.querySelector(".nextText").style.display = "none";
+                    // Mostrar botón "finalzar"
+                    const endButton = document.createElement("button");
+                    endButton.classList.add("button");
+
+                    endButton.textContent = "Jugar de nuevo";
+
+                    optionsElement.append(endButton);
+                    endButton.addEventListener('click', () => {
+                        Game.reset();
+                    });
                 }
             }
         }

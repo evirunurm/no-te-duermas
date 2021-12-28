@@ -16,11 +16,13 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /*1rem = 10px*/
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 * {
   font-family: var(--PrimaryFont);
   margin: 0;
@@ -58,7 +60,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
 }
 
 /*Bototnes*/
@@ -104,6 +106,10 @@ html {
   animation: startAnimation 3s;
 }
 
+.startscreen > h1 {
+  margin: 0 0 3rem 0;
+}
+
 .visible {
   animation: startAnimation 1.5s;
 }
@@ -144,4 +150,45 @@ html {
 
 #sound {
   display: none;
+}
+
+/*ZZZ*/
+.zzz {
+  position: relative;
+  left: 25%;
+}
+
+#z1 {
+  animation: z1-animation 3s linear infinite alternate;
+}
+#z2 {
+  animation: z2-animation 2s linear infinite alternate;
+}
+#z3{
+  animation: z3-animation 2.5s linear infinite alternate;
+}
+
+@keyframes z1-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, -10px);
+  }
+}
+@keyframes z2-animation {
+  0% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(10px, 0px);
+  }
+}
+@keyframes z3-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-7px, 10px);
+  }
 }
