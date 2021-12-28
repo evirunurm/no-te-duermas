@@ -1,8 +1,6 @@
 import OriginalTexts from "./texts.js";
 
-
 // Ajuste de volumen de la música
-
 const btnMusic = document.querySelector('#music-play');
 btnMusic.addEventListener('click', () => {
     const audio = document.querySelector('#audio');
@@ -69,9 +67,6 @@ const Player = (() => {
 
 const Interface = (() => {
     let textLevel = 0;
-
-
-
     let texts = JSON.parse(JSON.stringify(OriginalTexts));
 
     // Listener del botón de PLAY para transición de primer lvl
@@ -84,6 +79,17 @@ const Interface = (() => {
         showText();
         transitionAnimation('.lvl'); // Animación de transición
     });
+
+    // TODO: Debería mejorarse!!!
+    document.querySelector("#faq-button").addEventListener("click", () => {
+
+        if (document.querySelector("#faq").style.display === "none") {
+            document.querySelector("#faq").style.display = "block";
+        } else {
+            document.querySelector("#faq").style.display = "none";
+        }
+    });
+
     const appElement = document.querySelector("#app");
     const startScreen = document.querySelector(".startscreen");
 
