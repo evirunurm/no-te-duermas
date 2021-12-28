@@ -1,12 +1,12 @@
 let OriginalTexts = [
     {
-        id: 0,
+        id: "0",
         text: "Te despiertas.<br/> Parece una mañana como cualquier otra.<br/> Pero hay algo diferente : Tienes una cita hoy.",
         mostrar: true,
         imgsrc: "./imgs/sleeping.png"
     },
     {
-        id: 1,
+        id: "1",
         text: "Te levantas y vas a prepararte. Te duchas, te vistes, y decides desayunar.<br/> Qué desayunas?",
         mostrar: true,
         opciones: {
