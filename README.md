@@ -3,6 +3,7 @@
 <hr>
 <h3>Por hacer :</h3>
 <ul>
+    <li>Crear un botón que de la opción de resetar en cualquier punto del juego</li>
     <li><del>Un botón de "Más información" con un desplegable que cuenta qué es esto.</del></li>
     <li>Que la canción sea un loop perfecto (Alonso)</li>
     <li>Ortografía</li>
