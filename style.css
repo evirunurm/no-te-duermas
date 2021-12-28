@@ -7,6 +7,7 @@
   --LighterBlack: rgba(0, 0, 0, 0.75);
   --LigtherHover: rgba(0, 0, 0, 0.37);
   --White: #fff;
+  --Gray: rgb(71, 71, 71);
   --PrimaryFont: 'Poppins', serif;
 }
 
@@ -120,4 +121,27 @@ html {
 /*Clase para ajustar el boton de play a su original provisional*/
 .btn-play {
   width: 40%;
+}
+
+/*Background music*/
+.btn-music {
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  z-index: 3;
+  border: none;
+  left: 2rem;
+  top: 2rem;
+}
+
+.btn-music svg:hover{
+  stroke: var(--Gray);
+}
+
+#mute {
+  display: block;
+}
+
+#sound {
+  display: none;
 }

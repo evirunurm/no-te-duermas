@@ -1,8 +1,26 @@
+
 import OriginalTexts from "./texts.js";
 
 
 // Ajuste de volumen de la música
-document.querySelector('#music').volume = 0.2;
+
+const btnMusic = document.querySelector('#music-play');
+btnMusic.addEventListener('click', () => {
+    const audio = document.querySelector('#audio');
+    const sound = document.querySelector('#sound');
+    const mute = document.querySelector('#mute');
+    if (!audio.paused) {
+        audio.pause();
+        sound.style.display = "none";
+        mute.style.display = "block";
+    } else {
+        audio.play();
+        audio.volume = 0.2;
+        sound.style.display = "block";
+        mute.style.display = "none";
+    }
+
+});
 
 const Player = (() => {
 
