@@ -1,4 +1,3 @@
-
 import OriginalTexts from "./texts.js";
 
 
@@ -197,7 +196,7 @@ const Interface = (() => {
 })();
 
 
-    const Game = (() => {
+const Game = (() => {
     let currentDecision = 0;
 
     const start = () => {
@@ -245,13 +244,12 @@ const Interface = (() => {
         makeDecision,
         reset
     };
-    })();
+})();
 
-    const Main = (() => {
+const Main = (() => {
     const startButton = document.querySelector("#startgame");
     startButton.addEventListener("click", Game.start);
-
-    return {};
-    })();
+    return {}
+})();
 
 
