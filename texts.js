@@ -26,7 +26,7 @@ let OriginalTexts = [
     },
     {
         id: '3',
-        text: "Has tardado en prepararte más de lo que crías que te iba a costar.<br/> Sales a la calle. ",
+        text: "Has tardado en prepararte más de lo que creías que te iba a costar.<br/> Sales a la calle. ",
         mostrar: true,
     },
     {

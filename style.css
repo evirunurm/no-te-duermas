@@ -118,6 +118,28 @@ html {
   100% {opacity: 1;}
 }
 
+/*Botón de reset en cualquier momento*/
+.btn-sleep {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.sleep-message {
+  display: none;
+  position: absolute;
+  right: 2.5rem;
+  top: 7rem;
+  background-color: var(--LighterBlack);
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+
+.btn-sleep:hover + .sleep-message {
+  display: block;
+  animation: startAnimation .5s;
+}
+
 /*Clase para ajustar boton de Reset provisional*/
 .btn-again {
   width: auto;
@@ -204,6 +226,10 @@ html {
 
 }
 
+.faq-button:hover {
+  filter: brightness(50%);
+}
+
 .faq-box {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
@@ -221,6 +247,10 @@ html {
 
 .freepik-atribution {
   opacity: 30%;
+}
+
+.none {
+  display: none;
 }
 
 /*MEDIA QUERIES*/

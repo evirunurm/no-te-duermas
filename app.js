@@ -31,6 +31,12 @@ const Interface = (() => {
         // Listener del botón de PLAY para transición de primer lvl
         // se puede optimizar
         document.querySelector("#startgame").addEventListener("click", () => {
+            // Ocultar la información extra y botón
+            document.querySelector('#faq-button').classList.add('none');
+            document.querySelector('.faq').classList.add('none');
+            document.querySelector('#faq').style = "";
+            // Mostrar botón de reset
+            document.querySelector('.btn-sleep').classList.remove('none');
             transitionAnimation('.lvl');
         });
         document.querySelector(".nextText").addEventListener("click", () => {
@@ -108,7 +114,7 @@ const Interface = (() => {
                     // Mostrar botón "finalzar"
                     const endButton = document.createElement("button");
                     endButton.classList.add("button");
-
+                    endButton.setAttribute('id', 'btn-fin');
                     endButton.textContent = "Siguiente";
 
                     optionsElement.append(endButton);
@@ -127,7 +133,9 @@ const Interface = (() => {
                     endButton.classList.add("button");
                     endButton.textContent = "Jugar de nuevo";
                     optionsElement.append(endButton);
+                    document.querySelector('#btn-fin').classList.add('none');
                     endButton.addEventListener('click', () => {
+                        document.querySelector('#btn-fin').classList.remove('none');
                         Game.reset();
                     });
                 }
@@ -141,6 +149,8 @@ const Interface = (() => {
         textLevel++;
     };
 
+    const btnSleep = document.querySelector('.btn-sleep');
+    btnSleep.addEventListener('click', () => Game.reset());
 
     const transitionAnimation = (elementClass) => {
         const element = document.querySelector(elementClass);
