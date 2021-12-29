@@ -3,6 +3,7 @@ import OriginalTexts from "./texts.js";
 const Interface = (() => {
     let textLevel = 0;
     let texts = JSON.parse(JSON.stringify(OriginalTexts));
+    let audioInterval;
 
     const appElement = document.querySelector("#app");
     const startScreen = document.querySelector(".startscreen");
@@ -20,6 +21,10 @@ const Interface = (() => {
     }
 
     const reset = () => {
+        // Hace que la música no termine de bajar el volumen cuando al terminar historia
+        // le das a "Siguiente" antes de que baje la música.
+        clearInterval(audioInterval);
+        document.querySelector('#audio').volume = 0.2;
         appElement.classList.add("dark");
         startScreen.style.display = "flex";
         document.querySelector('.lvl').style.display = "none";
@@ -79,6 +84,7 @@ const Interface = (() => {
     //  Ahora depende del atributo "textLevel" directamente.
     const showText = () => {
         let foundMatch = false;
+
         for (const text of texts) {
             if (text.id == textLevel && !text.mostrar) {
                 textLevel++;
@@ -115,11 +121,17 @@ const Interface = (() => {
                     endButton.classList.add("button");
                     endButton.setAttribute('id', 'btn-fin');
                     endButton.textContent = "Siguiente";
-
                     optionsElement.append(endButton);
                     endButton.addEventListener('click', () => {
                         Game.reset();
                     });
+                    // Baja el volumen de la música 0.05 cada 1000ms.
+                    const audio = document.querySelector('#audio');
+                    audioInterval = setInterval(() => {
+                        audio.volume -= 0.05;
+                        if (audio.volume <= 0) clearInterval(audioInterval);
+                    }, 1000);
+
                 }
                 if ("imgsrc" in text) {
                     appElement.style.backgroundImage = `url(${text.imgsrc})`;
@@ -137,6 +149,10 @@ const Interface = (() => {
                         document.querySelector('#btn-fin').classList.remove('none');
                         Game.reset();
                     });
+                }
+                if ("soundsrc" in text) {
+                    const audio = new Audio(text.soundsrc);
+                    audio.play();
                 }
             }
         }

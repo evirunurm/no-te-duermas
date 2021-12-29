@@ -83,7 +83,8 @@ let OriginalTexts = [
         id: '11',
         text: "Entras al café.",
         mostrar: true,
-        imgsrc: "./imgs/bar.png"
+        imgsrc: "./imgs/bar.png",
+        soundsrc: "./music/doorbell.mp3"
     },
     {
         id: '12',
