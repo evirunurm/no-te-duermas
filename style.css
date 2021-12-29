@@ -157,12 +157,13 @@ html {
   position: absolute;
   z-index: 3;
   border: none;
-  left: 2rem;
-  top: 2rem;
+  left: 0.7rem;
+  top: 0.7rem;
 }
 
-.btn-music svg:hover{
-  stroke: var(--Gray);
+.btn-music:hover{
+  /*stroke: var(--Gray);*/
+  filter: brightness(50%);
 }
 
 #mute {
@@ -239,6 +240,7 @@ html {
   padding: 1.5rem;
   font-size: 1.3rem;
   display: none;
+  max-width: 50%;
 }
 
 .faq {
@@ -262,5 +264,8 @@ html {
   }
   .lvl {
     width: 80%;
+  }
+  .faq-box {
+    max-width: 80%;
   }
 }
