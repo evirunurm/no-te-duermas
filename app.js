@@ -1,6 +1,5 @@
 import OriginalTexts from "./texts.js";
 
-
 const Interface = (() => {
     let textLevel = 0;
     let texts = JSON.parse(JSON.stringify(OriginalTexts));

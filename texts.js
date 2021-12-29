@@ -231,7 +231,7 @@ let OriginalTexts = [
     },
     {
         id: '33',
-        text: "Llegais a la bolera. <br/> Está llena de gente.",
+        text: "Llegáis a la bolera. <br/> Está llena de gente.",
         mostrar: true,
         imgsrc: "./imgs/bowling.png"
     },
@@ -329,7 +329,7 @@ let OriginalTexts = [
     {
         id: '47',
         affected: "43a",
-        text: "Seguís caminando en silencio. Estáis solos, lo único que os acompaña es el humo que sale al respirar.<br/> Decides intentar animar el ambiente y empezar un tema.",
+        text: "Seguís caminando en silencio. Estáis solos, lo único que os acompaña es el vapor que sale al respirar.<br/> Decides intentar animar el ambiente y empezar un tema.",
         mostrar: false,
     },
     {
@@ -385,7 +385,7 @@ let OriginalTexts = [
     {
         id: '55',
         affected: "54a",
-        text: "El segundo hombre te da una patada en la tripa.<br/> No puedes hacer otra cosa que morderte la lengua del dolor. Piensas que así distrarás tu cerebro del dolor real, siempre has hecho eso.",
+        text: "El segundo hombre te da una patada en el estomago.<br/> No puedes hacer otra cosa que morderte la lengua del dolor. Piensas que así distrarás tu cerebro del dolor real, siempre has hecho eso.",
         mostrar: false,
     },
     {
@@ -610,7 +610,7 @@ let OriginalTexts = [
     },
     {
         id: '91',
-        text: "Poco a poco vas a cerrando tus ojos. <br/>Te duermes...",
+        text: "Poco a poco vas cerrando tus ojos. <br/>Te duermes...",
         mostrar: true,
     },
     {
