@@ -53,7 +53,7 @@ let OriginalTexts = [
         id: '7a',
         text: "Bajas a la estación. Te sientas en uno de los bancos que hay a lo largo del andén.<br/> El próximo tren viene en 11 minutos. Decides esperar.",
         mostrar: false,
-        imgsrc: "./imgs/metro.png"
+        imgsrc: "./imgs/metro.png",
     },
     {
         id: '7b',
@@ -234,7 +234,8 @@ let OriginalTexts = [
         id: '33',
         text: "Llegáis a la bolera. <br/> Está llena de gente.",
         mostrar: true,
-        imgsrc: "./imgs/bowling.png"
+        imgsrc: "./imgs/bowling.png",
+        soundsrc: "./music/bowling.mp3"
     },
     {
         id: '34',
@@ -350,6 +351,7 @@ let OriginalTexts = [
         affected: "43a",
         text: "Ella insiste en ir más rápido. Le haces caso. <br/> Aumentáis el ritmo.<br/> Te giras y te das cuenta de que están corriendo hacia vosotros.",
         mostrar: false,
+        soundsrc: "./music/rape.mp3"
     },
     {
         id: '51',
@@ -562,6 +564,7 @@ let OriginalTexts = [
         id: '82a',
         text: "Le llamas.<br/>Conecta.</br>”Hola, ¿Mia?”",
         mostrar: false,
+        soundsrc: "./music/phone.mp3"
     },
     {
         id: '82b',

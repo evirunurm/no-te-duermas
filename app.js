@@ -4,9 +4,14 @@ const Interface = (() => {
     let textLevel = 0;
     let texts = JSON.parse(JSON.stringify(OriginalTexts));
     let audioInterval;
+    let extraAudio;
 
     const appElement = document.querySelector("#app");
     const startScreen = document.querySelector(".startscreen");
+
+    const audio = document.querySelector('#audio');
+    const sound = document.querySelector('#sound');
+    const mute = document.querySelector('#mute');
 
     const getTexts = () => {
         return texts;
@@ -57,9 +62,7 @@ const Interface = (() => {
         });
         // Ajuste de volumen de la música
         document.querySelector('#music-play').addEventListener('click', () => {
-            const audio = document.querySelector('#audio');
-            const sound = document.querySelector('#sound');
-            const mute = document.querySelector('#mute');
+
             if (!audio.paused) {
                 audio.pause();
                 sound.style.display = "none";
@@ -85,6 +88,7 @@ const Interface = (() => {
     // Quitado el parametro "level" que ensuciaba la función.
     //  Ahora depende del atributo "textLevel" directamente.
     const showText = () => {
+
         let foundMatch = false;
         for (const text of texts) {
             if (text.id == textLevel && !text.mostrar) {
@@ -127,12 +131,17 @@ const Interface = (() => {
                         Game.reset();
                     });
                     // Baja el volumen de la música 0.05 cada 1000ms.
-                    const audio = document.querySelector('#audio');
+                    console.log(extraAudio.volume)
                     audioInterval = setInterval(() => {
                         audio.volume -= 0.05;
-                        if (audio.volume <= 0) clearInterval(audioInterval);
+                        extraAudio.volume -= 0.15;
+                        console.log("Audio", audio.volume)
+                        console.log("Extra", extraAudio.volume)
+                        if (audio.volume <= 0.05 ||  extraAudio.volume <= 0.20) {
+                            clearInterval(audioInterval);
+                            extraAudio.pause();
+                        };
                     }, 1000);
-
                 }
                 if ("imgsrc" in text) {
                     appElement.style.backgroundImage = `url(${text.imgsrc})`;
@@ -152,8 +161,14 @@ const Interface = (() => {
                     });
                 }
                 if ("soundsrc" in text) {
-                    const audio = new Audio(text.soundsrc);
-                    audio.play();
+                    extraAudio = new Audio(text.soundsrc);
+                    extraAudio.play();
+                    if (text.soundsrc === "./music/rape.mp3") {
+                        audio.pause();
+                        sound.style.display = "none";
+                        mute.style.display = "block";
+                        extraAudio.loop = true;
+                    }
                 }
             }
         }
