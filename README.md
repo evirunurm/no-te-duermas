@@ -4,6 +4,8 @@
 <h3>Por hacer :</h3>
 <ul>
     <li>Poner sonidos ambientes al pasar de texto.</li>
+    <li>Añadir final anternativo al dar "Dormir".</li>
+    <li>Quitar la posibilidad de subrayar el texto "Siguiente" del botón.</li>
     <li><del>Hacer que la música baje el volumen progresivamente al llegar a un final.</del></li>
     <li><del>Crear un botón que de la opción de resetar en cualquier punto del juego</del></li>
     <li><del>Un botón de "Más información" con un desplegable que cuenta qué es esto.</del></li>

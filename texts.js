@@ -57,7 +57,7 @@ let OriginalTexts = [
     },
     {
         id: '7b',
-        text: "Vas caminando hacia el café. Tienes bastante sueño, pero el ligero paso con el que vas hace que eso no importe tanto.",
+        text: "Vas caminando hacia el café. Tienes bastante sueño, pero el ligero paso con el que vas hace que eso no importe tanto.<br/>Está empezando a llover",
         mostrar: false,
         imgsrc: "./imgs/walking.png"
     },
@@ -177,7 +177,7 @@ let OriginalTexts = [
     },
     {
         id: '25',
-        text: "El tiempo pasa volando. Miras la hora y ya son casi las cuatro de la tarde. Te acabas de acordar del plan que teníais de ir a la bolera. Ella dice que os puede llevar. Qué haces?",
+        text: "El tiempo pasa volando. Miras la hora y ya son casi las cuatro de la tarde. Te acabas de acordar del plan que teníais de ir a la bolera. Ella dice que podeís ir en su coche. Qué haces?",
         mostrar: true,
         opciones: {
             a: "Ir en coche",
@@ -323,7 +323,7 @@ let OriginalTexts = [
     {
         id: '46',
         affected: "43a",
-        text: "Está empezando a hacer frío. El ambiente se ha llenando se una niebla densa. Se le nota más triste que antes.",
+        text: "Está empezando a hacer frío. El ambiente se ha llenando de una niebla densa. Se le nota más triste que antes.",
         mostrar: false,
         imgsrc: "./imgs/fog.png"
     },
@@ -386,7 +386,7 @@ let OriginalTexts = [
     {
         id: '55',
         affected: "54a",
-        text: "El segundo hombre te da una patada en el estomago.<br/> No puedes hacer otra cosa que morderte la lengua del dolor. Piensas que así distrarás tu cerebro del dolor real, siempre has hecho eso.",
+        text: "El segundo hombre te da una patada en el estómago.<br/> No puedes hacer otra cosa que morderte la lengua del dolor. Piensas que así distaerás tu cerebro del dolor real, siempre has hecho eso.",
         mostrar: false,
     },
     {
@@ -524,7 +524,7 @@ let OriginalTexts = [
     },
     {
         id: '78',
-        text: "Llegas a tu casa después de 40 minutos de caminar. No sientes ni tu pies, ni tus manos.<br/>Le pones comida en el plato a tu gato. Suficiente para los días que te cueste acordarte de él de nuevo.",
+        text: "Llegas a tu casa después de 40 minutos de caminar. No sientes ni tus pies, ni tus manos.<br/>Le pones comida en el plato a tu gato. Suficiente para los días que te cueste acordarte de él de nuevo.",
         mostrar: true,
         imgsrc: "./imgs/cat.png"
     },
@@ -618,7 +618,7 @@ let OriginalTexts = [
         id: '92',
         final: true,
         end: true,
-        text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferenete : Te falta ella.",
+        text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferente : Te falta ella.",
         mostrar: true,
         imgsrc: "./imgs/sleeping.png"
     },
