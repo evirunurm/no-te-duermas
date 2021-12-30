@@ -4,6 +4,13 @@
 <h3>Por hacer :</h3>
 <ul>
     <li>Poner sonidos ambientes al pasar de texto.</li>
+    <ul>
+        <li>Llamar</li>
+        <li>Bolera</li>
+        <li>Cambiar música en violación</li>
+        <li>Metro, al montarse</li>
+        <li><del>Cafetería</del></li>
+    </ul>
     <li>Añadir final anternativo al dar "Dormir".</li>
     <li>Quitar la posibilidad de subrayar el texto "Siguiente" del botón.</li>
     <li><del>Hacer que la música baje el volumen progresivamente al llegar a un final.</del></li>
