@@ -72,6 +72,8 @@ const Interface = (() => {
                 mute.style.display = "none";
             }
         });
+        const btnSleep = document.querySelector('.btn-sleep');
+        btnSleep.addEventListener('click', () => Game.reset());
     }
 
     const hideStartScreen = () => {
@@ -84,7 +86,6 @@ const Interface = (() => {
     //  Ahora depende del atributo "textLevel" directamente.
     const showText = () => {
         let foundMatch = false;
-
         for (const text of texts) {
             if (text.id == textLevel && !text.mostrar) {
                 textLevel++;
@@ -164,8 +165,7 @@ const Interface = (() => {
         textLevel++;
     };
 
-    const btnSleep = document.querySelector('.btn-sleep');
-    btnSleep.addEventListener('click', () => Game.reset());
+
 
     const transitionAnimation = (elementClass) => {
         const element = document.querySelector(elementClass);
@@ -188,20 +188,17 @@ const Interface = (() => {
 
 
 const Game = (() => {
-    let currentDecision = 0;
 
     const start = () => {
         Interface.hideStartScreen();
-        Interface.showText(Interface.getTextLevel());
+        Interface.showText();
     };
 
     const makeDecision = (decision) => {
-        currentDecision++;
         takeRoute(Interface.getTextLevel(), decision);
     };
 
     const reset = () => {
-        currentDecision = 0;
         Interface.setTextLevel(0);
         Interface.reset();
         Game.start();
@@ -211,7 +208,7 @@ const Game = (() => {
         let text = Interface.getTexts().find(text => {
             return text.id === `${nextLevel}${choice}`;
         });
-        Interface.getTexts()[Interface.getTexts().indexOf(text)].id =  nextLevel;
+        Interface.getTexts()[Interface.getTexts().indexOf(text)].id = nextLevel;
         Interface.getTexts()[Interface.getTexts().indexOf(text)].mostrar = true;
 
         let affectedTexts = Interface.getTexts().filter(text => {
@@ -220,12 +217,10 @@ const Game = (() => {
         affectedTexts.forEach((text) => {
             Interface.getTexts()[Interface.getTexts().indexOf(text)].mostrar = true;
         });
-
     };
 
     return {
         start,
-        currentDecision,
         makeDecision,
         reset
     };
@@ -237,5 +232,3 @@ const Main = (() => {
     startButton.addEventListener("click", Game.start);
     return {}
 })();
-
-
