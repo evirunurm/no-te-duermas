@@ -12,7 +12,7 @@
         <li>Metro, al montarse</li>
         <li><del>Cafetería</del></li>
     </ul>
-    <li>Añadir controlador de volumen.</li>
+    <li><del>Añadir controlador de volumen.</del></li>
     <li>Añadir final anternativo al dar "Dormir".</li>
     <li><del>Quitar la posibilidad de subrayar el texto "Siguiente" del botón.</del></li>
     <li><del>Hacer que la música baje el volumen progresivamente al llegar a un final.</del></li>
