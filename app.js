@@ -33,6 +33,9 @@ const Interface = (() => {
         audio.play();
         sound.style.display = "block";
         mute.style.display = "none";
+        if (extraAudio) {
+            extraAudio.pause();
+        }
 
         appElement.classList.add("dark");
         startScreen.style.display = "flex";
