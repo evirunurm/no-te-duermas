@@ -29,7 +29,7 @@ const Interface = (() => {
         // Hace que la música no termine de bajar el volumen cuando al terminar historia
         // le das a "Siguiente" antes de que baje la música.
         clearInterval(audioInterval);
-        audio.volume = 0.2;
+        audio.volume = document.querySelector("#volume").value;
         audio.play();
         sound.style.display = "block";
         mute.style.display = "none";
@@ -73,7 +73,7 @@ const Interface = (() => {
                 mute.style.display = "block";
             } else {
                 audio.play();
-                audio.volume = 0.2;
+                audio.volume = document.querySelector("#volume").value;
                 audio.loop = true;
                 sound.style.display = "block";
                 mute.style.display = "none";
@@ -83,8 +83,7 @@ const Interface = (() => {
         // Input de volumen
         const volumen = document.querySelector('.btn-volume');
         volumen.addEventListener('mousemove', () => {
-            audio.volume = (volumen.value / 10);
-            console.log(audio.volume);
+            audio.volume = document.querySelector("#volume").value;
         })
 
         const btnSleep = document.querySelector('.btn-sleep');
@@ -143,15 +142,17 @@ const Interface = (() => {
                         Game.reset();
                     });
                     // Baja el volumen de la música 0.05 cada 1000ms.
-                    console.log(extraAudio.volume)
                     audioInterval = setInterval(() => {
                         audio.volume -= 0.05;
-                        extraAudio.volume -= 0.15;
-                        console.log("Audio", audio.volume)
-                        console.log("Extra", extraAudio.volume)
-                        if (audio.volume <= 0.05 ||  extraAudio.volume <= 0.20) {
+                        if (extraAudio) {
+                            extraAudio.volume -= 0.15;
+                        }
+                        if (audio.volume <= 0.05 || extraAudio?.volume <= 0.20) {
                             clearInterval(audioInterval);
-                            extraAudio.pause();
+                            if (extraAudio) {
+                                extraAudio.pause();
+                            }
+
                         };
                     }, 1000);
                 }
