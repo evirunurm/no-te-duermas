@@ -6,8 +6,7 @@
     <li>Poner sonidos ambientes al pasar de texto.</li>
     <ul>
         <li><del>Llamar</del></li>
-        <li>Sonido radio</li>
-        <li>Leche en vaso</li>
+        <li><del>Sonido radio</del></li>
         <li><del>Bolera</del></li>
         <li><del>Cambiar música en la violación</del></li>
         <li>Metro, al montarse</li>
