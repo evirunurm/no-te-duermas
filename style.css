@@ -71,6 +71,7 @@ html {
   padding: 1rem;
   width: auto; /*Original 40%*/
   cursor: pointer;
+  user-select: none;
 }
 
 .button:hover {
@@ -123,6 +124,7 @@ html {
   position: absolute;
   right: 2rem;
   top: 2rem;
+  user-select: none;
 }
 
 .sleep-message {
@@ -143,6 +145,7 @@ html {
 /*Clase para ajustar boton de Reset provisional*/
 .btn-again {
   width: auto;
+  user-select: none;
 }
 
 /*Clase para ajustar el boton de play a su original provisional*/
