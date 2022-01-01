@@ -22,3 +22,5 @@
     <li><del>Ortografía</del></li>
     <li><del>Arreglar un par de errores que hay con que no salta a la siquiente página después de pulsar "Siguiente". Probablemente porblema del textLevel. Pasa más adelante en la historia, si juegas un poco de manera natural te das cuenta.</del></li>
 </ul>
+
+<a href="https://evirunurm.github.io/gamejam/">Live Preview</a>
