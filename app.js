@@ -79,6 +79,14 @@ const Interface = (() => {
                 mute.style.display = "none";
             }
         });
+
+        // Input de volumen
+        const volumen = document.querySelector('.btn-volume');
+        volumen.addEventListener('mousemove', () => {
+            audio.volume = (volumen.value / 10);
+            console.log(audio.volume);
+        })
+
         const btnSleep = document.querySelector('.btn-sleep');
         btnSleep.addEventListener('click', () => Game.reset());
     }
