@@ -9,7 +9,7 @@
         <li><del>Sonido radio</del></li>
         <li><del>Bolera</del></li>
         <li><del>Cambiar música en la violación</del></li>
-        <li>Metro, al montarse</li>
+        <li><del>Metro, al montarse</del></li>
         <li><del>Cafetería</del></li>
     </ul>
     <li><del>Añadir controlador de volumen.</del></li>

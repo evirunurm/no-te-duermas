@@ -88,6 +88,10 @@ const Interface = (() => {
         volumen.addEventListener('mousemove', () => {
             audio.volume = document.querySelector("#volume").value;
         })
+        // Input de volumen para el móvil
+        volumen.addEventListener('touchmove', () => {
+            audio.volume = document.querySelector("#volume").value;
+        })
 
         const btnSleep = document.querySelector('.btn-sleep');
         btnSleep.addEventListener('click', () => Game.reset());
