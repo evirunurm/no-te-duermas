@@ -188,7 +188,8 @@ let OriginalTexts = [
         id: '26a',
         text: "Aceptas su propuesta de ir en coche. Os metéis en su coche. <br/> Pones la radio. ",
         mostrar: false,
-        imgsrc: "./imgs/car.png"
+        imgsrc: "./imgs/car.png",
+        soundsrc: "./music/radio.mp3"
     },
     {
         id: '26b',

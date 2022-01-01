@@ -29,7 +29,11 @@ const Interface = (() => {
         // Hace que la música no termine de bajar el volumen cuando al terminar historia
         // le das a "Siguiente" antes de que baje la música.
         clearInterval(audioInterval);
-        document.querySelector('#audio').volume = 0.2;
+        audio.volume = 0.2;
+        audio.play();
+        sound.style.display = "block";
+        mute.style.display = "none";
+
         appElement.classList.add("dark");
         startScreen.style.display = "flex";
         document.querySelector('.lvl').style.display = "none";
@@ -171,7 +175,7 @@ const Interface = (() => {
                 if ("soundsrc" in text) {
                     extraAudio = new Audio(text.soundsrc);
                     extraAudio.play();
-                    if (text.soundsrc === "./music/rape.mp3") {
+                    if (text.soundsrc === "./music/rape.mp3" || text.soundsrc === "./music/radio.mp3") {
                         audio.pause();
                         sound.style.display = "none";
                         mute.style.display = "block";
