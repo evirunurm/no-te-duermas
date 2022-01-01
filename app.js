@@ -153,7 +153,7 @@ const Interface = (() => {
                                 extraAudio.pause();
                             }
 
-                        };
+                        }
                     }, 1000);
                 }
                 if ("imgsrc" in text) {
@@ -176,7 +176,7 @@ const Interface = (() => {
                 if ("soundsrc" in text) {
                     extraAudio = new Audio(text.soundsrc);
                     extraAudio.play();
-                    if (text.soundsrc === "./music/rape.mp3" || text.soundsrc === "./music/radio.mp3") {
+                    if (text.soundsrc === "./music/rape.mp3" || text.soundsrc === "./music/radio.mp3" || text.soundsrc === "./music/earphones.mp3") {
                         audio.pause();
                         sound.style.display = "none";
                         mute.style.display = "block";

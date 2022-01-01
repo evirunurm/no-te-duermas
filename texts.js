@@ -64,8 +64,9 @@ let OriginalTexts = [
     {
         id: '8',
         affected: "7a",
-        text: "Te pones los cascos y te hundes en la múscia. Tienes bastante sueño.<br/> Tus párpados pesan cada vez más y más.<br/> Los cierras.",
+        text: "Te pones los auriculares y te hundes en la múscia. Tienes bastante sueño.<br/> Tus párpados pesan cada vez más y más.<br/> Los cierras.",
         mostrar: false,
+        soundsrc: "./music/earphones.mp3"
     },
     {
         id: '9',
@@ -164,6 +165,7 @@ let OriginalTexts = [
         id: '22',
         text: "Se abre la puerta del café. Entra ella. Ya casi te habías olvidado de esos ojos.",
         mostrar: true,
+        soundsrc: "./music/doorbell.mp3"
     },
     {
         id: '23',
@@ -220,6 +222,7 @@ let OriginalTexts = [
         id: '30',
         text: "Os sentáis en el asiento de al lado de la puerta de salida del tren. Después de dos paradas, se sube un hombre en el que notas algo raro. Quizá sea la manera de la que va vestido, quizá sea su cara que te es familiar. ",
         mostrar: true,
+        soundsrc: "./music/subway_door.mp3"
     },
     {
         id: '31',
