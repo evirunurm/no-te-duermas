@@ -5,6 +5,7 @@ const Interface = (() => {
     let texts = JSON.parse(JSON.stringify(OriginalTexts));
     let audioInterval;
     let extraAudio;
+    console.log(texts);
 
     const appElement = document.querySelector("#app");
     const startScreen = document.querySelector(".startscreen");
