@@ -5,7 +5,6 @@ const Interface = (() => {
     let texts = JSON.parse(JSON.stringify(OriginalTexts));
     let audioInterval;
     let extraAudio;
-    console.log(texts);
 
     const appElement = document.querySelector("#app");
     const startScreen = document.querySelector(".startscreen");
@@ -184,12 +183,27 @@ const Interface = (() => {
                 if ("soundsrc" in text) {
                     extraAudio = new Audio(text.soundsrc);
                     extraAudio.play();
-                    if (text.soundsrc === "./music/rape.mp3" || text.soundsrc === "./music/radio.mp3" || text.soundsrc === "./music/earphones.mp3") {
-                        audio.pause();
+
+                    if (text.soundsrc === "./music/sad.mp3" || text.soundsrc === "./music/radio.mp3" || text.soundsrc === "./music/earphones.mp3") {
+                        extraAudio.volume = 0;
+                        audioInterval = setInterval(() => {
+                            audio.volume -= 0.05;
+                            if (audio.volume <= 0.05) {
+                                clearInterval(audioInterval);
+                                audio.pause();
+                                audioInterval = setInterval(() => {
+                                    extraAudio.volume += 0.15;
+                                    if (extraAudio.volume >= 1 - 0.15) {
+                                        clearInterval(audioInterval);
+                                    }
+                                }, 200);
+                            }
+                        }, 200);
                         sound.style.display = "none";
                         mute.style.display = "block";
                         extraAudio.loop = true;
                     }
+
                 }
             }
         }

@@ -355,7 +355,7 @@ let OriginalTexts = [
         affected: "43a",
         text: "Ella insiste en ir más rápido. Le haces caso. <br/> Aumentáis el ritmo.<br/> Te giras y te das cuenta de que están corriendo hacia vosotros.",
         mostrar: false,
-        soundsrc: "./music/rape.mp3"
+        soundsrc: "./music/sad.mp3"
     },
     {
         id: '51',
@@ -580,6 +580,7 @@ let OriginalTexts = [
         id: '83',
         text: "“Buenos días, ¿es familiar de Mia?”",
         mostrar: true,
+        soundsrc: "./music/sad.mp3"
     },
     {
         id: '84',
@@ -627,7 +628,7 @@ let OriginalTexts = [
         end: true,
         text: "Te despiertas. Parece una mañana como cualquier otra. Pero hay algo diferente : Te falta ella.",
         mostrar: true,
-        imgsrc: "./imgs/sleeping.png"
+        imgsrc: "./imgs/bed2.png"
     },
 ];
 export default OriginalTexts;
