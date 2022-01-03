@@ -1,26 +1,7 @@
-# No te duermas
-<h3>GameJam Project</h3>
-<hr>
-<h3>Por hacer :</h3>
-<ul>
-    <li>Poner sonidos ambientes al pasar de texto.</li>
-    <ul>
-        <li><del>Llamar</del></li>
-        <li><del>Sonido radio</del></li>
-        <li><del>Bolera</del></li>
-        <li><del>Cambiar música en la violación</del></li>
-        <li><del>Metro, al montarse</del></li>
-        <li><del>Cafetería</del></li>
-    </ul>
-    <li><del>Añadir controlador de volumen.</del></li>
-    <li>Añadir final anternativo al dar "Dormir".</li>
-    <li><del>Quitar la posibilidad de subrayar el texto "Siguiente" del botón.</del></li>
-    <li><del>Hacer que la música baje el volumen progresivamente al llegar a un final.</del></li>
-    <li><del>Crear un botón que de la opción de resetar en cualquier punto del juego</del></li>
-    <li><del>Un botón de "Más información" con un desplegable que cuenta qué es esto.</del></li>
-    <li><del>Que la canción sea un loop perfecto (Alonso)</del></li>
-    <li><del>Ortografía</del></li>
-    <li><del>Arreglar un par de errores que hay con que no salta a la siquiente página después de pulsar "Siguiente". Probablemente porblema del textLevel. Pasa más adelante en la historia, si juegas un poco de manera natural te das cuenta.</del></li>
-</ul>
+<h1 style="border-bottom: 1px solid rgba(255,255,255,0.2);padding-bottom:0.5rem">No te duermas</h1> 
+<h3>GameJam 2021 - 2022</h3>
+<h3>Tema: El fin es el principio</h3>
+Este es un <b>juego narrativo</b> donde el rumbo de la historia la dictas con tus elecciones.<br>
+Deberás tomar las <b>decisiones</b> que creas correctas recordando que el fin es el principio, pero <b>no hay un único fin</b>.
 
-<a href="https://evirunurm.github.io/gamejam/">Live Preview</a>
+<a href="https://evirunurm.github.io/no-te-duermas/">Live Preview</a>

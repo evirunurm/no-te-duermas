@@ -214,7 +214,7 @@ html {
   width: 16px;
   background: var(--Gray);
   margin-top: -6.5px;
-  border: 2px solid var(--Gray);
+  border: 2px solid var(--White);
 }
 
 .btn-volume:focus {
